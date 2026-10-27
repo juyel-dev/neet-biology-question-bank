@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NCERT Biology Page Question Set",
+  "type": "object",
+  "required": [
+    "source",
+    "question_count",
+    "questions"
+  ],
+  "properties": {
+    "source": {
+      "type": "object",
+      "required": [
+        "class",
+        "subject",
+        "unit",
+        "section",
+        "pdf_file",
+        "pdf_page",
+        "chapter",
+        "chapter_page",
+        "source_scope"
+      ],
+      "properties": {
+        "class": {
+          "type": "integer",
+          "enum": [
+            11,
+            12
+          ]
+        },
+        "class_label": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "curriculum": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chapter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "section": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pdf_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pdf_page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "chapter_page": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "source_scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "question_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "topic",
+          "question",
+          "explanation",
+          "source_text",
+          "difficulty",
+          "question_origin",
+          "verification"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^BIO-C(11|12)-"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "topic": {
+            "type": "string"
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "correct_option": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "correct_options": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "source_text": {
+            "type": "string"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ]
+          },
+          "question_origin": {
+            "type": "string"
+          },
+          "verification": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}
