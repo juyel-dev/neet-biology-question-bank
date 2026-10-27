@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "NCERT Biology Page Question Set",
+  "title": "NCERT Page Question Set (Physics / Chemistry / Biology)",
   "type": "object",
   "required": [
     "source",
@@ -34,7 +34,11 @@
         },
         "subject": {
           "type": "string",
-          "minLength": 1
+          "enum": [
+            "Physics",
+            "Chemistry",
+            "Biology"
+          ]
         },
         "curriculum": {
           "type": "string"
@@ -97,7 +101,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "^BIO-C(11|12)-"
+            "pattern": "^(PHY|CHE|BIO)-C(11|12)-"
           },
           "type": {
             "type": "string",
