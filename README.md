@@ -57,10 +57,12 @@ Each question should include a unique ID, type, topic, question text, options or
 
 ## Current coverage
 
-| Class | Subject | Unit / section | Source PDF page | Questions |
-| --- | --- | --- | ---: | ---: |
-| 11 | Biology | Unit 1 — Diversity in the Living World | 1–9 | in progress |
+| Class | Subject | Unit / chapter | Source PDF | PDF pages | Questions |
+| --- | --- | --- | --- | ---: | ---: |
+| 11 | Biology | Unit 1 front matter | kebo101.pdf | 1–2 | 36 |
+| 11 | Biology | Unit 1, Chapter 1 — The Living World | kebo101.pdf | 3–9 | 135 |
+| 11 | Biology | Unit 1, Chapter 2 — Biological Classification | kebo102.pdf | 1–13 | 232 |
 
 Physics (11, 12), Chemistry (11, 12) and Biology (12) folders are set up and waiting for content.
 
-In the supplied Biology PDF, pages 1–2 are Unit 1 front matter; Chapter 1, **The Living World**, starts on PDF page 3. Front matter remains in the repository but is separate from Chapter 1.
+In `kebo101.pdf`, pages 1–2 are Unit 1 front matter; Chapter 1, **The Living World**, starts on PDF page 3. In `kebo102.pdf`, PDF page 1 is the Chapter 2 opener (printed page 10) and PDF page 13 holds the chapter exercises (printed page 22). Front matter remains in the repository but is separate from chapter content.
